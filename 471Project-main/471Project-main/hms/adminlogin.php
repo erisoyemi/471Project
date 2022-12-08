@@ -15,7 +15,7 @@ if (isset($_POST['login'])){
         $query = "SELECT * FROM admin WHERE emp_no='$emp_no' ";
         $result = mysqli_query($connect, $query);
     
-        if(mysqli_num_rows($result) == 1){
+        if(mysqli_num_rows($result)){
             echo "<script>alert('Login Successful')</script>";
 
             $_SESSION['admin'] = $emp_no;
